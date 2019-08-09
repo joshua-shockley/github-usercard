@@ -108,6 +108,8 @@ function makeTag(stuff) {
     infoDiv.appendChild(theUserName)
     infoDiv.appendChild(theLoc)
     infoDiv.appendChild(theProfile)
+    theProfile.textContent = `Profile:`;
+
     theProfile.appendChild(theLink)
     infoDiv.appendChild(theFollowers)
     infoDiv.appendChild(theFollowing)
@@ -117,8 +119,7 @@ function makeTag(stuff) {
     theName.textContent = stuff.name;
     theUserName.textContent = stuff.login;
     theLoc.textContent = `${stuff.location}`;
-    theProfile.textContent = `Profile:`;
-    theLink.setAttribute('href', stuff.html_url);
+    theLink.setAttribute('href', `${stuff.html_url}`);
     theLink.textContent = `${stuff.html_url}`;
     theFollowers.textContent = `Followers: ${stuff.followers}`;
     theFollowing.textContent = `Following: ${stuff.following}`;
